@@ -6,11 +6,11 @@
 
 @theme {
   --font-inter: 'Inter', system-ui, sans-serif;
-};
+}
 
 @layer base {
   html, body {
-    @apply font-inter text-neutral-900 text-[14px];
+    @apply font-inter text-black text-[14px];
   }
 
   button:not(:disabled),
@@ -18,8 +18,7 @@
     @apply cursor-pointer;
   }
 
-  button:disabled,
-  input[type="button"]:disabled {
-    @apply cursor-not-allowed pointer-events-none;
+  :disabled {
+    @apply !cursor-not-allowed;
   }
 }
